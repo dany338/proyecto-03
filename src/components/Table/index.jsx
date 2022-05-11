@@ -1,7 +1,7 @@
 import React from 'react';
 import RowTable from '../RowTable';
 
-const Table = ({ listaProductos, eliminarProducto }) => {
+const Table = () => {
   return (
     <table className='table'>
       <thead>
