@@ -1,10 +1,13 @@
 import Rutas from './routes';
 import AuthState from './context/auth/authState';
+import ProductState from './context/products/ProductState';
 
 function App() {
   return (
     <AuthState>
-      <Rutas />;
+      <ProductState>
+        <Rutas />;
+      </ProductState>
     </AuthState>
   );
 }

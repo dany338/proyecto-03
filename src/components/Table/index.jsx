@@ -1,7 +1,7 @@
 import React from 'react';
 import RowTable from '../RowTable';
 
-const Table = () => {
+const Table = ({ listaProductos, eliminarProducto }) => {
   return (
     <table className='table'>
       <thead>
@@ -16,12 +16,8 @@ const Table = () => {
         </tr>
       </thead>
       <tbody>
-        <RowTable />
-        <RowTable />
-        <RowTable />
-        <RowTable />
-        <RowTable />
-        <RowTable />
+        {listaProductos.map((producto, index) => <RowTable key={producto.id} info={producto} indice={index} elimnar={() => eliminarProducto(producto.id)} />)}
+
       </tbody>
     </table>
   );
